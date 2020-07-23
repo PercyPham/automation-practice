@@ -38,11 +38,10 @@ export default class ViewingAppointment {
                 }`;
         }
 
-        // TODO: need to verify appointment subject
-        // expect(appointmentMenuAndSubject).to.equal(
-        //     ScheduleViewPage.getSubject(),
-        //     'FAILED: Subject is incorrect'
-        // );
+        expect(appointmentMenuAndSubject).to.equal(
+            ScheduleViewPage.getSubject(),
+            'FAILED: Subject is incorrect'
+        );
 
         const expectedDateTime = this._formatDateTimeToAssert();
         expect(expectedDateTime).to.equal(

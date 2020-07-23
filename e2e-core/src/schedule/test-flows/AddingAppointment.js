@@ -22,8 +22,8 @@ export default class AddingAppointment {
         // Step 2: Fill detail appointment at add new appointment screen
         this._fillAppointmentDetail();
 
-        // TODO Step 3: Click on the Add button to add new an appointment
-        // ScheduleAddPage.clickOnAddBtn();
+        // Step 3: Click on the Add button to add new an appointment
+        ScheduleAddPage.clickOnAddBtn();
 
         return this;
     }
@@ -36,19 +36,18 @@ export default class AddingAppointment {
     _fillAppointmentDetail() {
         let schedulePage = ScheduleAddPage;
 
-        // TODO: In the code below, the ordering of some actions is incorrect. They should follow the behavior of the feature.
-
-        if (this._appointment.startDay) {
-            schedulePage.selectStartDay(this._appointment.startDay);
+        if (this._appointment.startYear) {
+            schedulePage.selectStartYear(this._appointment.startYear);
         }
 
         if (this._appointment.startMonth) {
             schedulePage.selectStartMonth(this._appointment.startMonth);
         }
 
-        if (this._appointment.startYear) {
-            schedulePage.selectStartYear(this._appointment.startYear);
+        if (this._appointment.startDay) {
+            schedulePage.selectStartDay(this._appointment.startDay);
         }
+
 
         if (this._appointment.startHour) {
             schedulePage.selectStartHour(this._appointment.startHour);

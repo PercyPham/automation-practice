@@ -30,7 +30,7 @@ class ScheduleAddPo {
      * @returns {ScheduleAddPo}
      */
     selectStartDay(dayValue) {
-        // TODO: implement body method
+        ElementUtils.element('#start_day').selectByAttribute("value", dayValue);
 
         return this;
     }
@@ -40,7 +40,7 @@ class ScheduleAddPo {
      * @returns {ScheduleAddPo}
      */
     selectStartHour(hourValue) {
-        // TODO: implement body method
+        ElementUtils.element('#start_hour').selectByAttribute("value", hourValue);
 
         return this;
     }
@@ -50,7 +50,7 @@ class ScheduleAddPo {
      * @returns {ScheduleAddPo}
      */
     selectStartMinute(minuteValue) {
-        // TODO: implement body method
+        ElementUtils.element('#start_minute').selectByVisibleText( minuteValue);
 
         return this;
     }
@@ -136,7 +136,7 @@ class ScheduleAddPo {
      * @returns {ScheduleAddPo}
      */
     inputNotes(notesValue) {
-        // TODO: implement body method
+        ElementUtils.element('//textarea[@name="memo"]').setValue(notesValue);
 
         return this;
     }
